@@ -5,26 +5,26 @@ class API {
         let route = `${BASE_URL}/apiroutes/mood/`
         if (mood1) route += mood1 + '/'
         if (mood2) route += mood2
-        console.log(route)
+        // console.log(route)
         return axios.get(route)
     }
     static getMantra(mantra_id){
         let passinId = mantra_id||"";
         let route = `https://mudl-backend.herokuapp.com/apiroutes/mantras/`
         route+=passinId
-        console.log(route)
+        // console.log(route)
         return axios.get(route)
     }
     static addUserEmotion(user,emotions_id){
         let route = `https://mudl-backend.herokuapp.com/apiroutes/add/`
         route+=user+"/"+emotions_id
-        console.log(route)
+        // console.log(route)
         return axios.get(route)
     }
     static getUserEmotion(user){
         let route = `https://mudl-backend.herokuapp.com/apiroutes/info/`
         route+=user
-        console.log(route)
+        // console.log(route)
         return axios.get(route)
     }
 }
